@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author"content="Tomas Luna"/>
+  <meta name="description" content="Signos del Zodiaco"/>
+  <meta name="keywords" content="piscis, tauro, leo, practica de js"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <title>Signos Del Zodiaco</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container">
+      <a class="navbar-brand text-light" href="index.html">Descubre tu Signo</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active text-light"
+              aria-current="page"
+              href="index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle text-light"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tipos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Horoscopo de hoy</a></li>
+              <li><a class="dropdown-item" href="#">Horoscopo Chino</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Algo más</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Busca tu signo"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav></header>
+  <main>
+    <section class="container my-4">
+      <div id="carouselsignos" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselsignos"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselsignos"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselsignos"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://images.pexels.com/photos/10609261/pexels-photo-10609261.jpeg?cs=srgb&dl=pexels-jakub-pabis-10609261.jpg&fm=jpg"
+              class="d-block w-100 carousel"
+              alt="tipos de signos"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://images.pexels.com/photos/6806599/pexels-photo-6806599.jpeg?cs=srgb&dl=pexels-rodnae-productions-6806599.jpg&fm=jpg"
+              class="d-block w-100 carousel"
+              alt="tarot"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://images.pexels.com/photos/6932066/pexels-photo-6932066.jpeg?cs=srgb&dl=pexels-mikhail-nilov-6932066.jpg&fm=jpg"
+              class="d-block w-100 carousel"
+              alt="logotipo"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselpokemon"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselpokemon"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <p>
+        Los datos fueron tomados de la siguiente web
+        <a href="https://www.pokemon.com/el/pokedex/"
+          >https://www.pexels.com/es-es/buscar/hor%C3%B3scopo/</a
+        >
+      </p>
+    </section>
+    <section class="container my-5">
+      <article class="row text-center centrarCards">
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0 margen" >
+          <div class="card">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/pisces.svg"
+              class="card-img-top"
+              alt="Piscis"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Piscis
+              </h5>
+              <div id="info"></div>
+              <button type="button" class="btn btn-primary" id="btnVerDetalle">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card margen">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/scorpio.svg"
+              class="card-img-top"
+              alt="Escorpio"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Escorpio
+                
+              </h5>
+              <button type="button" class="btn btn-primary">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card margen">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/libra.svg"
+              class="card-img-top"
+              alt="Libra"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Libra
+                
+              </h5>
+              <button type="button" class="btn btn-primary">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card margen">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/virgo.svg"
+              class="card-img-top"
+              alt="Virgo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Virgo
+              </h5>
+              <button type="button" class="btn btn-primary">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card margen">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/cancer.svg"
+              class="card-img-top"
+              alt="Cancer"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Cancer
+              </h5>
+              <button type="button" class="btn btn-primary">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card margen">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/leo.svg"
+              alt="Leo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Leo
+              </h5>
+              <button type="button" class="btn btn-primary">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card margen">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/aquarius.svg"
+              class="card-img-top"
+              alt="Aquario"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Acuario
+                
+              </h5>
+              <button type="button" class="btn btn-primary">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card margen">
+            <img
+              src="https://www.himgs.com/imagenes/hola-usa/horoscopo/capricorn.svg"
+              class="card-img-top"
+              alt="Capricorio"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Capricornio
+                
+              </h5>
+              <button type="button" class="btn btn-primary">
+                Ver detalle
+              </button>
+            </div>
+          </div>
+        </aside>
+      </article>
+    </section>
+    <section class="container my-5">
+      <h2 class="text-center">Ingresa para saber tu Horoscopo</h2>
+      <form name="formulario1">
+        <table style="text-align: left; margin-left: auto; margin-right: auto;">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="dia">Ingresa el valor de dia:</label>
+                    </td>
+                    <td>
+                        <input name="dia" required="required" step="1" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mes">Ingresa el valor de mes:</label>
+                    </td>
+                    <td>
+                        <input name="mes" required="required" step="1" type="number" />
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2" rowspan="1">
+                        <input value="Procesar" type="button" onclick="algoritmo();" />
+                        <input type="reset" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    </section>
+    <section class="container my-5">
+      <h2 class="text-center">Los Signos y Sus Elementos</h2>
+      <p class="lead text-center">Determinan la manera en la que nos vinculamos, sentimos y percibimos el mundo. Cuáles son las luces y sombras de cada uno: claves para descubrir el poder oculto de cada elemento.</p>
+       <article class="row text-center centrarCards">
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0 margen">
+          <div class="card">
+            <img
+              src="https://luzdemar.co/wp-content/uploads/2020/11/4-1.png"
+              class="card-img-top"
+              alt="Agua"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Agua
+              </h5>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fire_symbol_%28alchemical%29.svg/220px-Fire_symbol_%28alchemical%29.svg.png"
+              class="card-img-top"
+              alt="Fuego"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Fuego
+              </h5>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card">
+            <img
+              src="https://luzdemar.co/wp-content/uploads/2020/11/3.png"
+              class="card-img-top"
+              alt="Aire"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Aire
+              </h5>
+            </div>
+          </div>
+        </aside>
+        <aside class="col-10 col-md-4 col-lg-3 m-0 p-0">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Earth_symbol_%28alchemical%29.svg/220px-Earth_symbol_%28alchemical%29.svg.png"
+              class="card-img-top"
+              alt="Tierra"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Tierra
+              </h5>
+            </div>
+          </div>
+        </aside>
+       </article>
+        <h2 class="text-center">Ingresa para saber tu elemento</h2>
+        <form>
+          <table style="text-align: left; margin-left: auto; margin-right: auto;">
+            <tbody>
+              <tr>
+                <td>
+                  <label>Ingresa el elemento que deseas saber:</label>
+                </td>
+                <td>
+                  <input type="text">
+                </td>
+              </tr>
+              <tr align="center">
+                <td colspan="2" rowspan="1">
+                    <input value="Procesar" type="button">
+                    <input type="reset"/>
+                </td>
+            </tr>
+            </tbody>
+
+          </table>
+        </form>
+        
+        
+    </section>
+  </main>
+  
+  <footer class="bg-dark py-4 text-center text-light">
+    <p>&copy Todos los derechos reservados</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="js/1Tp.js"></script>
+  <script src="js/2Tp.js"></script>
+  <script src="js/3Tp.js"></script>
+</body>
+</html>
